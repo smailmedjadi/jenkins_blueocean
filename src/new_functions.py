@@ -17,3 +17,5 @@ def insertionSort(list):
          position = position-1
 
      list[position]=currentvalue
+     
+print ("testing functions")
