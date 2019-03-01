@@ -10,25 +10,25 @@ pipeline {
 		stage ('Build'){
 			steps{
 				echo "Building the checkout project";
-				bat "pipeline_script\build.bat"
+				bat "pipeline_script/build.bat"
 			}
 		}
 		stage ('Unit-test'){
 			steps{
 				echo "Verify project JUnit";
-				bat "pipeline_script\Unit.bat"			
+				bat "pipeline_script/Unit.bat"			
 			}
 		}
 		stage ('Quality-Gate'){
 			steps{
 				echo "Verifying Quality Gates";
-				bat "pipeline_script\Quality.bat"
+				bat "pipeline_script/Quality.bat"
 			}
 		}
 		stage ('Deploy'){
 			steps{
 				echo "Deploying with XDeploy on ASS Enivronment";
-				bat "pipeline_script\Deploy.bat"
+				bat "pipeline_script/Deploy.bat"
 			}
 		}
 	}
