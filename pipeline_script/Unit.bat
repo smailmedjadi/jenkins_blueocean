@@ -1,0 +1,1 @@
+echo "JUnit tests : %date% : %time%"
